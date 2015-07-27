@@ -1,0 +1,82 @@
+﻿Build started 23/7/2015 1:14:06 AM.
+     1>Project "D:\CODE\workspace\MegaMan\MegaMan\MegaMan\MegaMan.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Block.cpp Camera.cpp Collision.cpp DXGraphic.cpp DXInput.cpp DXSound.cpp Game.cpp GameObject.cpp GameWindows.cpp MegaMan.cpp PlayingScreen.cpp QuadNode.cpp Sprite.cpp Texture.cpp winMain.cpp
+         winMain.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Texture.cpp
+     1>d:\code\workspace\megaman\megaman\megaman\texture.cpp(70): warning C4244: '=' : conversion from 'UINT' to 'float', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\texture.cpp(71): warning C4244: '=' : conversion from 'UINT' to 'float', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\texture.cpp(121): warning C4244: '=' : conversion from 'LONG' to 'float', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\texture.cpp(122): warning C4244: '=' : conversion from 'LONG' to 'float', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\texture.cpp(151): warning C4244: 'argument' : conversion from 'LONG' to 'FLOAT', possible loss of data
+         Sprite.cpp
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(60): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(61): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(62): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(63): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(73): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(74): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(75): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\sprite.cpp(76): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+         QuadNode.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>d:\code\workspace\megaman\megaman\megaman\quadnode.cpp(30): warning C4018: '<' : signed/unsigned mismatch
+         PlayingScreen.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(70): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(71): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(177): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(203): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(235): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(258): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(293): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\playingscreen.cpp(317): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+         MegaMan.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>d:\code\workspace\megaman\megaman\megaman\megaman.cpp(124): warning C4018: '<' : signed/unsigned mismatch
+         GameWindows.cpp
+         GameObject.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Game.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         DXSound.cpp
+         DXInput.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>d:\code\workspace\megaman\megaman\megaman\dxinput.cpp(122): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
+         DXGraphic.cpp
+         Collision.cpp
+         Camera.cpp
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(15): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(75): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(86): warning C4244: '=' : conversion from 'FLOAT' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(87): warning C4244: '=' : conversion from 'FLOAT' to 'LONG', possible loss of data
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(169): warning C4018: '>=' : signed/unsigned mismatch
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(240): warning C4018: '>=' : signed/unsigned mismatch
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(294): warning C4018: '>=' : signed/unsigned mismatch
+         Block.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Generating Code...
+     1>d:\code\workspace\megaman\megaman\megaman\camera.cpp(315): warning C4715: 'CCamera::convertCameraPositionOnPath' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CODE\workspace\MegaMan\MegaMan\Debug\MegaMan.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dinput8.lib dxguid.lib dsound.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\CODE\workspace\MegaMan\MegaMan\Debug\MegaMan.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CODE\workspace\MegaMan\MegaMan\Debug\MegaMan.lib" /MACHINE:X86 Debug\Block.obj
+         Debug\Camera.obj
+         Debug\Collision.obj
+         Debug\DXGraphic.obj
+         Debug\DXInput.obj
+         Debug\DXSound.obj
+         Debug\Game.obj
+         Debug\GameObject.obj
+         Debug\GameWindows.obj
+         Debug\MegaMan.obj
+         Debug\PlayingScreen.obj
+         Debug\QuadNode.obj
+         Debug\Sprite.obj
+         Debug\Texture.obj
+         Debug\winMain.obj
+         MegaMan.vcxproj -> D:\CODE\workspace\MegaMan\MegaMan\Debug\MegaMan.exe
+     1>Done Building Project "D:\CODE\workspace\MegaMan\MegaMan\MegaMan\MegaMan.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.68

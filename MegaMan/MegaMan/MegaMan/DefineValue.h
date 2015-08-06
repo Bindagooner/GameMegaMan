@@ -36,8 +36,8 @@ this hearder define all information
 #define ID_MEGAMAN_JUMP 103
 
 #define MEGAMAN_VELOCITY_X 100
-#define MEGAMAN_VELOCITY_Y 350.0f
-#define GRAVITY -600.0f
+#define MEGAMAN_VELOCITY_Y 355.0f
+#define GRAVITY 1.09f
 
 // map boom
 #define ID_ENEMY_BALL  1

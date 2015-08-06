@@ -87,8 +87,7 @@ float CDynamicGameObject::checkCollision(CGameObject* gameObj, float& normalX, f
 
 	if (CCollision::checkBeforeAABB(sweptbroadphasebox, objbox))
 	{
-		timeCollision = CCollision::SweepAABB(sweptbroadphasebox, objbox, normalX, normalY, anim_rate);
-
+		timeCollision = CCollision::SweepAABB(mybox, objbox, normalX, normalY, anim_rate);
 		if (timeCollision = anim_rate && CCollision::checkBeforeAABB(mybox, objbox))
 			return 0;
 	}

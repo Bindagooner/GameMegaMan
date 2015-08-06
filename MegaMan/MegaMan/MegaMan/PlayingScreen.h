@@ -28,7 +28,7 @@ private:
 	vector<vector<int>> _tileMatrix;	// Ma trận lưu các tile background
 	CTexture *_textureBackground;
 	CMegaMan *_pMegaMan;
-	CQuadNode* _quadNodeCollision;		// Cây tứ phân lưu các đối tượng va chạm trên màn hình
+	CQuadNode _quadNodeCollision;		// Cây tứ phân lưu các đối tượng va chạm trên màn hình
 	
 	vector<CGameObject*> _objectToCollision; // list đối tượng có thể va chạm trong viewport
 

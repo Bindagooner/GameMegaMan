@@ -265,6 +265,7 @@ void CPlayingScreen::loadMap(int idLevel)
 		// Set giá trị path cho camera
 		CCamera::getInstance()->setCamPosition(D3DXVECTOR2(cameraPaths[0].x + SCREEN_WIDTH / 2, cameraPaths[0].y + SCREEN_HEIGHT / 2));
 		_pMegaMan->setPosition(D3DXVECTOR2(cameraPaths[0].x, cameraPaths[0].y + SCREEN_HEIGHT / 2));
+		/*_pMegaMan->setPosition(D3DXVECTOR2(70, 1110));*/
 	}
 	fs.close();
 
@@ -275,9 +276,9 @@ void CPlayingScreen::loadMap(int idLevel)
 	for (it = lstNodes.begin(); it != lstNodes.end(); it++)
 	{
 		if (it == lstNodes.begin())
-			_quadNodeCollision = it->second;
+			_quadNodeCollision = *it->second;
 		else if (it != lstNodes.end())
-			_quadNodeCollision->addNode(it->second);
+			_quadNodeCollision.addNode(it->second);
 	}
 #pragma endregion
 
@@ -330,7 +331,7 @@ void CPlayingScreen::update(float anim_rate)
 
 	// xoa doi tuong trong list
 	_objectToCollision.clear();
-	_quadNodeCollision->getObjectInVP(CCamera::getInstance()->getViewport(), &_objectToCollision);
+	_quadNodeCollision.getObjectInVP(CCamera::getInstance()->getViewport(), &_objectToCollision);
 
 	_pMegaMan->update(anim_rate);
 

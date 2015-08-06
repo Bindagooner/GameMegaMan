@@ -13,10 +13,11 @@ CMegaMan::CMegaMan()
 
 	_isRight = true;
 	_direction = Direction::None;
-	_status = Status::Jump;
+	_status = Status::Start;
 	_a.x = 0.0f;
-	_a.y = GRAVITY;
-
+	_a.y = -GRAVITY;
+	_v.x = 0.0f;
+	_v.y = -MEGAMAN_VELOCITY_Y;
 }
 
 
@@ -88,10 +89,10 @@ void CMegaMan::updateAnimation(float anim_rate)
 
 void CMegaMan::updateBox(float anim_rate)
 {
-	_box.x = _position.x - _pSprite->getWidthSprite() / 2;
-	_box.y = _position.y + _pSprite->getHeightSprite() / 2;
-	_box.width = _pSprite->getWidthSprite();
-	_box.height = _pSprite->getHeightSprite();
+	_box.x = _position.x - _box.width / 2;
+	_box.y = _position.y + _box.height / 2;
+	_box.width = 16.0f;
+	_box.height = 24.0f;
 
 	if (!_isRight)
 	{
@@ -99,8 +100,8 @@ void CMegaMan::updateBox(float anim_rate)
 		_box.x = _box.x + _pSprite->getWidthSprite() / 2.0f - x - _box.width;
 	}
 
-	_box.vX = this->_v.x;
-	_box.vY = this->_v.y;
+	_box.vX = _v.x;
+	_box.vY = _v.y;
 }
 
 void CMegaMan::updateStatus(float anim_rate)
@@ -153,23 +154,25 @@ void CMegaMan::updateCollision(vector<CGameObject*> objectsToCollision, float an
 				leftTime = t;
 				leftObj = gameObj;
 			}
-				/*break;
-			case ID_DIE_ARROW:
-
-			default:
-				break;
-			}*/
+			if (topObj != NULL)
+				RespondTopCollision(topObj, topTime);
+			if (botObj != NULL)
+				RespondBotCollision(botObj, botTime);
+			if (leftObj != NULL)
+				RespondLeftCollision(leftObj, leftTime);
+			if (rightObj != NULL)
+				RespondRightCollision(rightObj, rightTime);
 		}
 	}
 
-	if (topObj != NULL)
+	/*if (topObj != NULL)
 		RespondTopCollision(topObj, topTime);
 	if (botObj != NULL)
 		RespondBotCollision(botObj, botTime);
 	if (leftObj != NULL)
 		RespondLeftCollision(leftObj, leftTime);
 	if (rightObj != NULL)
-		RespondRightCollision(rightObj, rightTime);
+		RespondRightCollision(rightObj, rightTime);*/
 
 #pragma endregion
 
@@ -187,11 +190,15 @@ void CMegaMan::RespondBotCollision(CGameObject* botObj, float botTime)
 		if (_status == Status::Jump)
 		{
 			_status = Status::Ground;
-			
 		}
-
 		_position.y += _v.y * botTime;
 		_v.y = 0.0f;
+		break;
+	case ID_FALLING_POINT:
+		if (_status == Start)
+		{
+			_status
+		}
 		break;
 	default:
 		break;

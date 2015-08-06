@@ -16,6 +16,7 @@ private:
 	// trạng thái megaman
 	enum Status
 	{
+		Start,  // bắt đầu game
 		Ground, // đứng trên mặt đất
 		Jump,	// nhảy
 	};

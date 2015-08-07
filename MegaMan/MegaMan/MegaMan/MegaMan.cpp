@@ -12,6 +12,7 @@ CMegaMan::CMegaMan()
 	_mapSprite[ID_MEGAMAN_JUMP] = new CSprite(CDXGraphic::getInstance()->getDevice(), FILEPATH_MEGAMAN_JUMP, 1, 1, 100);
 
 	_isRight = true;
+	_1stTime = true;
 	_direction = Direction::None;
 	_status = Status::Start;
 	_a.x = 0.0f;
@@ -61,7 +62,7 @@ void CMegaMan::updateKeyboard(float anim_rate)
 
 	if (input->isKeyDown(DIK_X))
 	{
-		if (_status == Status::Ground)
+		if (_status == Status::Stand)
 		{
 			_status = Status::Jump;
 			_v.x = MEGAMAN_VELOCITY_Y;
@@ -73,7 +74,7 @@ void CMegaMan::updateAnimation(float anim_rate)
 {
 	switch (_status)
 	{
-	case CMegaMan::Ground:
+	case CMegaMan::Stand:
 		if (_direction == Direction::None)
 			_pSprite = _mapSprite[ID_MEGAMAN_STAND];
 		else if (_direction == Direction::Forward)
@@ -189,15 +190,24 @@ void CMegaMan::RespondBotCollision(CGameObject* botObj, float botTime)
 	case ID_BLOCK:
 		if (_status == Status::Jump)
 		{
-			_status = Status::Ground;
+			_status = Status::Stand;
 		}
 		_position.y += _v.y * botTime;
 		_v.y = 0.0f;
 		break;
 	case ID_FALLING_POINT:
-		if (_status == Start)
+		if (_status == Status::Start)
 		{
-			_status
+			if (_1stTime)
+			{
+				_status = Status::Stand;
+				_a.x = 0;
+				_a.y = 0;
+			}
+		}
+		else {
+			_status = Status::Jump;
+			_a.y = -GRAVITY;
 		}
 		break;
 	default:

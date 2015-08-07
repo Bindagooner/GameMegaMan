@@ -17,7 +17,7 @@ private:
 	enum Status
 	{
 		Start,  // bắt đầu game
-		Ground, // đứng trên mặt đất
+		Stand, // đứng
 		Jump,	// nhảy
 	};
 
@@ -32,6 +32,8 @@ private:
 
 	Status _status; // trạng thái megaman
 	Direction _direction; // hướng di chuyển megaman
+
+
 	/*CSprite *_pCSpriteRun;
 	CSprite *_pCSpriteStand;
 	CSprite *_pCSpriteJump;*/
@@ -39,6 +41,7 @@ private:
 	map<int, CSprite*> _mapSprite; // map luu tat ca sprite cua megaman;
 	bool _isRight = true;
 	bool _isStand = true;
+	bool _1stTime = true;
 
 	void RespondTopCollision(CGameObject* topObj,float topTime);
 	void RespondBotCollision(CGameObject* botObj, float botTime);
